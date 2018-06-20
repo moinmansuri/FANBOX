@@ -1,0 +1,34 @@
+.content[data-module="inbox"] .filter .element-library {
+
+}
+
+.content[data-module="inbox"] .filter .element-library .col-md-6,
+.content[data-module="inbox"] .filter .element-library .col-md-4 {
+    margin-bottom: 20px;
+}
+
+.content[data-module="inbox"] .filter .element-library .square {
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+    border: 1px solid #8DABC4;
+    border-radius: 4px;
+    color: #8DABC4;
+    background-color: #ECF5FD;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+.content[data-module="inbox"] .filter .element-library .square i {
+    font-size: 36px;
+    margin-top: 10px;
+    color: #0093EE;
+}
+
+.content[data-module="inbox"] .filter .element-library .square span {
+    display: block;
+    font-size: 11px;
+}
+
+

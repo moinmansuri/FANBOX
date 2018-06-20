@@ -1,0 +1,537 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="css/datatables.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/jquery.webui-popover.min.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/module-inbox.css">
+    <link rel="stylesheet" href="css/module-content.css">
+
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div>
+    <div class="application">
+        <div class="topbar" id="topbar">
+            <span class="mobile-menu toggle">
+                <i class="material-icons">menu</i>
+            </span>
+            <a href="#home" class="app-name text-center">
+                administrator
+            </a>
+			<nav class="links left-side">
+				<ul>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="people.html">People</a></li>
+					<li class="active"><a href="teams.html">Teams</a></li>
+					<li><a href="explore.html">Explore</a></li>
+					<li><a href="community.html">Community</a></li>
+					<li><a href="#"><i class="material-icons">more_horiz</i></a></li>
+				</ul>
+			</nav>
+            <nav class="links">
+                <ul>
+                    <li>
+                       <div class="filter-title">
+                       <input type="search" placeholder="Search"/>
+						<i class="material-icons search">
+						search
+						</i>
+                    </div>
+                    </li>
+                    <li class="notifications active">
+                        <a href="#notifications" id="notifications-toggle">
+						<i class="material-icons">
+						public
+						</i></a>
+
+                        <div id="notifications-popover">
+                            <div class="notifications-popover">
+                                <a href="#notification/1" class="notification">
+                                    <img src="img/user.png">
+                                    <div class="message">
+                                        <span class="date">1 day ago</span>
+                                        <h3>Morbi leo risus, porta ac</h3>
+                                        <p>
+                                            Donecconsectetur ac, vestibulum at eros id elit non mi porta gravida at eget metus.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#notification/2" class="notification">
+                                    <img src="img/user.png">
+                                    <div class="message">
+                                        <span class="date">1 day ago</span>
+                                        <h3>Morbi leo risus, porta ac</h3>
+                                        <p>
+                                            Donecconsectetur ac, vestibulum at eros id elit non mi porta gravida at eget metus.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#notification/3" class="notification">
+                                    <img src="img/user.png">
+                                    <div class="message">
+                                        <span class="date">1 day ago</span>
+                                        <h3>Morbi leo risus, porta ac</h3>
+                                        <p>
+                                            Donecconsectetur ac, vestibulum at eros id elit non mi porta gravida at eget metus.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#notifications" class="read-notifications">Read all notifications</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="navigation">
+            <div class="sidebar">
+                <nav class="top">
+                    <ul>
+                        <li class="logo">
+                            <a href="#home"><img src="img/logo.svg"></a>
+                        </li>
+                        <li>
+                            <a href="#campaigns"><i class="material-icons">poll</i></a>
+                        </li>
+                        <li class="active">
+                            <a href="#inbox"><i class="material-icons">forum</i></a>
+                        </li>
+                        <li>
+                            <a href="#users"><i class="material-icons">account_box</i></a>
+                        </li>
+                        <li>
+                            <a href="#questions"><i class="material-icons">help</i></a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="bottom">
+                    <ul>
+                        <li>
+                            <a href="#settings"><i class="material-icons">settings</i></a>
+                        </li>
+                        <li>
+                            <a href="#profile"><img src="img/user.png"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu">
+                <div class="scroll">
+                    <nav class="icons">
+                        <ul>
+                            <li>
+                                <a href=""><i class="material-icons">insert_chart</i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="" data-toggle="dropdown" href=""><i class="material-icons">forum</i></a>
+								<div class="dropdown-menu">
+								<nav>
+									<h3>Social</h3>
+									<ul>
+										<li>
+											<a href="">Profile</a>
+										</li>
+										<li class="active">
+											<a href="">Messages <span>12</span></a>
+										</li>
+										<li>
+											<a href="">Friends</a>
+										</li>
+										<li>
+											<a href="">Photos</a>
+										</li>
+										<li>
+											<a href="">Communities</a>
+										</li>
+									</ul>
+								</nav>
+								<nav class="small">
+									<h3>Information</h3>
+									<ul>
+										<li>
+											<a href=""><i class="material-icons">settings</i> Settings</a>
+										</li>
+										<li>
+											<a href=""><i class="material-icons">insert_drive_file</i> Pages</a>
+										</li>
+										<li>
+											<a href=""><i class="material-icons">mode_edit</i> Edit info</a>
+										</li>
+									</ul>
+									<ul class="about security">
+										<li>
+											<i class="material-icons">
+											help
+											</i> About us
+										</li>
+									</ul>
+								</nav>
+								</div>
+                            </li>
+                            <li>
+                                <a href=""><i class="material-icons">assignment_ind</i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="" data-toggle="dropdown" href=""><i class="material-icons">help</i></a>
+								<div class="dropdown-menu">
+								<nav>
+									<h3>HELP CENTER</h3>
+									<ul>
+										<li>
+											<a href="">Home	</a>
+										</li>
+										<li class="active">
+											<a href="">How to use</a>
+										</li>
+										<li>
+											<a href="">Messaging</a>
+										</li>
+										<li>
+											<a href="">Managing account</a>
+										</li>
+										<li>
+											<a href="">Privacy</a>
+										</li>
+										<li>
+											<a href="">Policies</a>
+										</li>
+									</ul>
+								</nav>
+								<nav class="small">
+									<ul class="about green security">
+										<li>
+											<a href=""><i class="material-icons">email</i> Contact support</a>
+										</li>
+										<li>
+											<a href=""><i class="material-icons">security</i> Security</a>
+										</li>
+										<li>
+											<a href=""><i class="material-icons">live_help</i> About us</a>
+										</li>
+									</ul>
+								</nav>
+								</div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="about security text-center">
+					<nav>
+						<ul>
+							<li><a href="#"><i class="material-icons">edit</i></a></li>
+							<li class="user"><a href="#"><img src="img/user-normal-3.png" alt="" /></a></li>
+						</ul>
+					</nav>
+                </div>
+            </div>
+        </div>
+        <div class="commits employ" data-module="inbox"> <!-- add module class here -->
+            <div class="container">
+                <div class="scroll col-lg-11 pull-right col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="col-lg-6 col-sm-6 col-xs-12">
+							<h1>Main information</h1>
+							Showing
+							<span class="dropdown lightblue">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="">20</a>
+								<ul class="dropdown-menu">
+									<li><a href="">Lorem Ipsum</a></li>
+									<li><a href="">Lorem Ipsum</a></li>
+									<li><a href="">Lorem Ipsum</a></li>
+								</ul>
+							</span> out of 141 employees 
+						</div>
+						<div class="col-lg-6 btns small-text-center text-right col-sm-6 col-xs-12">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">Position</a>
+								<ul class="dropdown-menu">
+									<li><a href="">Lorem Ipsum</a></li>
+									<li><a href="">Lorem Ipsum</a></li>
+									<li><a href="">Lorem Ipsum</a></li>
+								</ul>
+							</div>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">Team</a>
+								<ul class="dropdown-menu">
+									<li><a href="">Lorem Ipsum</a></li>
+									<li><a href="">Lorem Ipsum</a></li>
+									<li><a href="">Lorem Ipsum</a></li>
+								</ul>
+							</div>
+							<a class="like blue" href="#">New task</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 small-text-center col-sm-12 col-xs-12">
+							<div class="col-lg-12 bg col-sm-12 col-xs-12">
+								<div class="table-responsive">
+									<table id="example" class="table table-striped table-bordered" style="width:100%">
+										<thead>
+											<tr>
+												<th>Name <img src="img/data.png" alt="" /></th>
+												<th>EMAIL <img src="img/icon-search.png" alt="" /></th>
+												<th>PHONE <img src="img/icon-search.png" alt="" /></th>
+												<th>POSITION</th>
+												<th>TEAM</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><img src="img/t-user-1.png" alt="" /> Patty Massey</td>
+												<td><a href="mailto:pattymassey@gmail.com">pattymassey@gmail.com</a></td>
+												<td>+1-202-555-0108</td>
+												<td>Copywriter</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+													<a class="b-lightgreen" href="#">Managment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><img src="img/t-user-2.png" alt="" /> Andrew Smith</td>
+												<td><a href="mailto:andrewsmith@gmail.com">andrewsmith@gmail.com</a></td>
+												<td>+1-202-555-0139</td>
+												<td>SEO</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+												</td>
+											</tr> 
+											<tr>
+												<td><img src="img/t-user-3.png" alt="" /> Mark Johnson</td>
+												<td><a href="mailto:markjohnson@gmail.com">markjohnson@gmail.com</a></td>
+												<td>+1-202-555-0175</td>
+												<td>Analyst</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+												</td>
+											</tr>
+											<tr>
+												<td><img src="img/t-user-1.png" alt="" /> Patty Massey</td>
+												<td><a href="mailto:pattymassey@gmail.com">pattymassey@gmail.com</a></td>
+												<td>+1-202-555-0108</td>
+												<td>Copywriter</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+													<a class="b-lightgreen" href="#">Managment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><img src="img/t-user-2.png" alt="" /> Andrew Smith</td>
+												<td><a href="mailto:andrewsmith@gmail.com">andrewsmith@gmail.com</a></td>
+												<td>+1-202-555-0139</td>
+												<td>SEO</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+												</td>
+											</tr> 
+											<tr>
+												<td><img src="img/t-user-3.png" alt="" /> Mark Johnson</td>
+												<td><a href="mailto:markjohnson@gmail.com">markjohnson@gmail.com</a></td>
+												<td>+1-202-555-0175</td>
+												<td>Analyst</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+												</td>
+											</tr>
+											<tr>
+												<td><img src="img/t-user-1.png" alt="" /> Patty Massey</td>
+												<td><a href="mailto:pattymassey@gmail.com">pattymassey@gmail.com</a></td>
+												<td>+1-202-555-0108</td>
+												<td>Copywriter</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+													<a class="b-lightgreen" href="#">Managment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><img src="img/t-user-2.png" alt="" /> Andrew Smith</td>
+												<td><a href="mailto:andrewsmith@gmail.com">andrewsmith@gmail.com</a></td>
+												<td>+1-202-555-0139</td>
+												<td>SEO</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+												</td>
+											</tr> 
+											<tr>
+												<td><img src="img/t-user-3.png" alt="" /> Mark Johnson</td>
+												<td><a href="mailto:markjohnson@gmail.com">markjohnson@gmail.com</a></td>
+												<td>+1-202-555-0175</td>
+												<td>Analyst</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+												</td>
+											</tr>
+											<tr>
+												<td><img src="img/t-user-1.png" alt="" /> Patty Massey</td>
+												<td><a href="mailto:pattymassey@gmail.com">pattymassey@gmail.com</a></td>
+												<td>+1-202-555-0108</td>
+												<td>Copywriter</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+													<a class="b-lightgreen" href="#">Managment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><img src="img/t-user-2.png" alt="" /> Andrew Smith</td>
+												<td><a href="mailto:andrewsmith@gmail.com">andrewsmith@gmail.com</a></td>
+												<td>+1-202-555-0139</td>
+												<td>SEO</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+												</td>
+											</tr> 
+											<tr>
+												<td><img src="img/t-user-3.png" alt="" /> Mark Johnson</td>
+												<td><a href="mailto:markjohnson@gmail.com">markjohnson@gmail.com</a></td>
+												<td>+1-202-555-0175</td>
+												<td>Analyst</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+												</td>
+											</tr>
+											<tr>
+												<td><img src="img/t-user-1.png" alt="" /> Patty Massey</td>
+												<td><a href="mailto:pattymassey@gmail.com">pattymassey@gmail.com</a></td>
+												<td>+1-202-555-0108</td>
+												<td>Copywriter</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+													<a class="b-lightgreen" href="#">Managment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><img src="img/t-user-2.png" alt="" /> Andrew Smith</td>
+												<td><a href="mailto:andrewsmith@gmail.com">andrewsmith@gmail.com</a></td>
+												<td>+1-202-555-0139</td>
+												<td>SEO</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+												</td>
+											</tr> 
+											<tr>
+												<td><img src="img/t-user-3.png" alt="" /> Mark Johnson</td>
+												<td><a href="mailto:markjohnson@gmail.com">markjohnson@gmail.com</a></td>
+												<td>+1-202-555-0175</td>
+												<td>Analyst</td>
+												<td class="buttons">
+													<a class="b-lalac" href="#">Marketing</a>
+													<a class="b-green" href="#">Design</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="dropdown close-popup active">
+                        <a href="#notifications" class="chat" data-toggle="dropdown" id="notifications-toggle">
+							<i id="chat-icon" class="material-icons">forum</i>
+							<i id="close-icon" class="material-icons hide">close</i>
+						</a>
+
+                        <div id="notifications-popover" class="dropdown-menu">
+                            <div class="notifications-popover">
+                                <a href="#notification/1" class="notification ft">
+                                    <img src="img/user-normal-5.png">
+                                    <div class="message">
+                                        <h3>Conversations</h3>
+                                        <p>
+                                            Latest from June, 12
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#notification/2" class="notification">
+                                    <img src="img/user.png">
+                                    <div class="message">
+                                        <span class="date active green">1h ago</span>
+                                        <h3>Mark Johnson</h3>
+                                        <p>
+                                            You don’t have to be a designer to appreciate good typography
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#notification/3" class="notification">
+                                    <img src="img/user-normal-4.png">
+                                    <div class="message">
+                                        <span class="date">1h ago</span>
+                                        <h3>Jane Smith</h3>
+                                        <p>
+                                            Hey! Our team is ready to the project we discuss a week ago! Let’s start this sh…
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#notifications" class="read-notifications"><i class="material-icons">remove_red_eye</i> New conversation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.webui-popover.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    $('#example').DataTable();
+  } );
+</script>
+
+<script>
+$(".chat").click(function(){
+    $("#chat-icon").toggleClass("hide");
+    $("#close-icon").toggleClass("hide");
+});
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

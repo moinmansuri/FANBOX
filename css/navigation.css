@@ -1,0 +1,255 @@
+.application > .navigation {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: calc(100% - 60px);
+    width: 100%;
+    background: #fff;
+    display: none;
+    z-index: 1;
+}
+
+.application > .navigation.active {
+    display: block;
+}
+
+.application > .navigation > .sidebar {
+    width: 100%;
+    height: 60px;
+    background-color: #44658B;
+    dbox-shadow: inset -15px 0px 15px 0px rgba(15,16,16,0.17);
+    top: 60px;
+    left: 0px;
+}
+
+.application > .navigation > .sidebar .top {
+
+}
+
+.application > .navigation > .sidebar .bottom {
+    float: right;
+}
+
+.application > .navigation > .menu nav ul,
+.application > .navigation > .sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.application > .navigation > .sidebar ul li {
+    float: left;
+
+    text-align: center;
+    font-size: 22px;
+}
+
+.application > .navigation > .sidebar ul li a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 66px;
+    color: #AAB2BD;
+    transition: color 0.3s;
+}
+
+.application > .navigation > .sidebar ul li:hover a {
+    border-bottom: 2px solid #557294;
+    color: #fff;
+}
+
+.application > .navigation > .sidebar ul li.active a {
+    border-bottom: 2px solid #81C926;
+    color: #fff;
+}
+
+.application > .navigation > .sidebar ul li.logo {
+    display: none;
+}
+
+.application > .navigation > .sidebar ul li.logo a {
+    border: 0px solid transparent !important;
+    border-bottom: 1px solid #557294 !important;
+    height: 60px !important;
+    width: 60px !important;
+}
+
+.application > .navigation > .sidebar ul li a img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.application > .navigation > .sidebar ul li:hover a img {
+    opacity: 1;
+}
+
+.application > .navigation > .menu {
+    border-right: 1px solid #D8E5EE;
+}
+
+.application > .navigation > .menu .scroll {
+    padding: 10px 10px 160px 10px;
+  /*  overflow: scroll;*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.application > .navigation > .menu nav {
+    margin-top: 20px;
+}
+
+.application > .navigation > .menu nav h3 {
+    color: #808c9c;
+    height: 42px;
+    line-height: 42px;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 0 0 0 20px;
+}
+
+.application > .navigation > .menu nav li + li {
+    margin-top: 6px;
+}
+
+.application > .navigation > .menu nav li a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 0 0 20px;
+text-decoration:none;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.application > .navigation > .menu nav li a span {
+	float:right;
+	background:#4ece3d;
+	color:#fff;
+	line-height:18px;
+	padding:1px 8px;
+	font-size:12px;
+	border-radius:15px;
+	margin-top:12px;
+	text-decoration:none;
+	margin-right:10px;
+}
+
+.application > .navigation > .menu nav.small li a {
+    font-size: 13px;
+}
+
+.application > .navigation > .menu nav li .material-icons {
+    color: #7e95a7;
+    font-size: 18px;
+    position: relative;
+    top: 4px;
+}
+
+.application > .navigation > .menu nav li:hover a,
+.application > .navigation > .menu nav li.active a {
+    color: #fff;
+    background-color: #3f536e;
+    text-decoration: none;
+}
+
+
+.application > .navigation > .menu .about {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3f5169;
+    border-top: 1px solid #5b6a7f;
+    padding: 20px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.application > .navigation > .menu .about.security .material-icons {
+	color:#58687d;
+}
+
+
+/*** New Style Css***/
+.application > .navigation > .sidebar {
+	display:none !important;
+}
+
+@media (min-width: 1024px){
+    .application > .navigation {
+        display: block;
+        position: relative;
+        top: 0px;
+        left: 0;
+        height: auto;
+    }
+
+    .application > .navigation > .menu {
+        display: block;
+        width: 60px;
+        height: calc(100% - 60px);
+        background-color: #2c405a;
+
+        position: fixed;
+        top: 60px;
+        left: 0px;
+        z-index: 1;
+    }
+
+    .application > .navigation > .sidebar {
+        display: block;
+        width: 60px;
+        height: 100%;
+
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+
+    .application > .navigation > .sidebar ul li.logo {
+        display: block;
+    }
+
+    .application > .navigation > .sidebar .top {
+
+    }
+
+    .application > .navigation > .sidebar .bottom {
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .application > .navigation > .sidebar ul li a,
+    .application > .navigation > .sidebar ul li a {
+        border-left: 2px solid transparent;
+        border-bottom: 1px solid #557294;
+    }
+
+    .application > .navigation > .sidebar ul li:hover a {
+        border-bottom: 1px solid #557294;
+        border-left: 2px solid #557294;
+    }
+
+    .application > .navigation > .sidebar ul li.active a {
+        border-bottom: 1px solid #557294;
+        border-left: 2px solid #81C926;
+    }
+
+    .application > .navigation > .sidebar .bottom ul li a {
+        border-top: 1px solid #557294;
+        border-bottom: 0px solid;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1170px) {
+
+}

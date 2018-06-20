@@ -1,0 +1,509 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="css/datatables.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/jquery.webui-popover.min.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/module-inbox.css">
+    <link rel="stylesheet" href="css/module-content.css">
+
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div>
+    <div class="application">
+        <div class="topbar" id="topbar">
+            <span class="mobile-menu toggle">
+                <i class="material-icons">menu</i>
+            </span>
+            <a href="#home" class="app-name text-center">
+                administrator
+            </a>
+			<nav class="links left-side">
+				<ul>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="people.html">People</a></li>
+					<li class="active"><a href="teams.html">Teams</a></li>
+					<li><a href="explore.html">Explore</a></li>
+					<li><a href="community.html">Community</a></li>
+					<li><a href="#"><i class="material-icons">more_horiz</i></a></li>
+				</ul>
+			</nav>
+            <nav class="links">
+                <ul>
+                    <li>
+                       <div class="filter-title">
+                       <input type="search" placeholder="Search"/>
+						<i class="material-icons search">
+						search
+						</i>
+                    </div>
+                    </li>
+                    <li class="notifications active">
+                        <a href="#notifications" id="notifications-toggle">
+						<i class="material-icons">
+						public
+						</i></a>
+
+                        <div id="notifications-popover">
+                            <div class="notifications-popover">
+                                <a href="#notification/1" class="notification">
+                                    <img src="img/user.png">
+                                    <div class="message">
+                                        <span class="date">1 day ago</span>
+                                        <h3>Morbi leo risus, porta ac</h3>
+                                        <p>
+                                            Donecconsectetur ac, vestibulum at eros id elit non mi porta gravida at eget metus.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#notification/2" class="notification">
+                                    <img src="img/user.png">
+                                    <div class="message">
+                                        <span class="date">1 day ago</span>
+                                        <h3>Morbi leo risus, porta ac</h3>
+                                        <p>
+                                            Donecconsectetur ac, vestibulum at eros id elit non mi porta gravida at eget metus.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#notification/3" class="notification">
+                                    <img src="img/user.png">
+                                    <div class="message">
+                                        <span class="date">1 day ago</span>
+                                        <h3>Morbi leo risus, porta ac</h3>
+                                        <p>
+                                            Donecconsectetur ac, vestibulum at eros id elit non mi porta gravida at eget metus.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#notifications" class="read-notifications">Read all notifications</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="navigation">
+            <div class="sidebar">
+                <nav class="top">
+                    <ul>
+                        <li class="logo">
+                            <a href="#home"><img src="img/logo.svg"></a>
+                        </li>
+                        <li>
+                            <a href="#campaigns"><i class="material-icons">poll</i></a>
+                        </li>
+                        <li class="active">
+                            <a href="#inbox"><i class="material-icons">forum</i></a>
+                        </li>
+                        <li>
+                            <a href="#users"><i class="material-icons">account_box</i></a>
+                        </li>
+                        <li>
+                            <a href="#questions"><i class="material-icons">help</i></a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="bottom">
+                    <ul>
+                        <li>
+                            <a href="#settings"><i class="material-icons">settings</i></a>
+                        </li>
+                        <li>
+                            <a href="#profile"><img src="img/user.png"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu">
+                <div class="scroll">
+                    <nav class="icons">
+                        <ul>
+                            <li>
+                                <a href=""><i class="material-icons">insert_chart</i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="" data-toggle="dropdown" href=""><i class="material-icons">forum</i></a>
+								<div class="dropdown-menu">
+								<nav>
+									<h3>Social</h3>
+									<ul>
+										<li>
+											<a href="">Profile</a>
+										</li>
+										<li class="active">
+											<a href="">Messages <span>12</span></a>
+										</li>
+										<li>
+											<a href="">Friends</a>
+										</li>
+										<li>
+											<a href="">Photos</a>
+										</li>
+										<li>
+											<a href="">Communities</a>
+										</li>
+									</ul>
+								</nav>
+								<nav class="small">
+									<h3>Information</h3>
+									<ul>
+										<li>
+											<a href=""><i class="material-icons">settings</i> Settings</a>
+										</li>
+										<li>
+											<a href=""><i class="material-icons">insert_drive_file</i> Pages</a>
+										</li>
+										<li>
+											<a href=""><i class="material-icons">mode_edit</i> Edit info</a>
+										</li>
+									</ul>
+									<ul class="about security">
+										<li>
+											<i class="material-icons">
+											help
+											</i> About us
+										</li>
+									</ul>
+								</nav>
+								</div>
+                            </li>
+                            <li>
+                                <a href=""><i class="material-icons">assignment_ind</i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="" data-toggle="dropdown" href=""><i class="material-icons">help</i></a>
+								<div class="dropdown-menu">
+								<nav>
+									<h3>HELP CENTER</h3>
+									<ul>
+										<li>
+											<a href="">Home	</a>
+										</li>
+										<li class="active">
+											<a href="">How to use</a>
+										</li>
+										<li>
+											<a href="">Messaging</a>
+										</li>
+										<li>
+											<a href="">Managing account</a>
+										</li>
+										<li>
+											<a href="">Privacy</a>
+										</li>
+										<li>
+											<a href="">Policies</a>
+										</li>
+									</ul>
+								</nav>
+								<nav class="small">
+									<ul class="about green security">
+										<li>
+											<a href=""><i class="material-icons">email</i> Contact support</a>
+										</li>
+										<li>
+											<a href=""><i class="material-icons">security</i> Security</a>
+										</li>
+										<li>
+											<a href=""><i class="material-icons">live_help</i> About us</a>
+										</li>
+									</ul>
+								</nav>
+								</div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="about security text-center">
+					<nav>
+						<ul>
+							<li><a href="#"><i class="material-icons">edit</i></a>
+							<li class="user"><a href="#"><img src="img/user-normal-3.png" alt="" /></a>
+						</ul>
+					</nav>
+                </div>
+            </div>
+        </div>
+        <div class="content" data-module="inbox"> <!-- add module class here -->
+            <div class="filter">
+
+                <div class="scroll">
+                    <div class="filter-title">
+                       <input type="search" placeholder="Search"/>
+						<i class="material-icons search">
+						search
+						</i>
+						<a href="#"><i class="material-icons add">
+						add
+						</i></a>
+                    </div>
+                    <div class="messages">
+                        <a href="#message/1" class="message active">
+                            <img src="img/user-2.png">
+                            <div class="message-info">
+                                <span class="date">15:45</span>
+                                <h3>Janet Erickson</h3>
+                                <p>
+                                    My quantitive. My math...
+									<span class="number">11</span>
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#message/1" class="message">
+                            <img src="img/user-3.png">
+                            <div class="message-info">
+                              <span class="date">15:45</span>
+                                <h3>My Name Here</h3>
+                                <p>
+                                    Donecconsectetur ac, vestibulum
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#message/1" class="message">
+                            <img src="img/user-3.png">
+                            <div class="message-info">
+                                <span class="date">15:45</span>
+                                <h3>My Name Here</h3>
+                                <p>Donecconsectetur ac, vestibulum</p>
+                            </div>
+                        </a>
+                        <a href="#message/1" class="message">
+                            <img src="img/user-3.png">
+                            <div class="message-info">
+                               <span class="date">15:45</span>
+                                <h3>My Name Here</h3>
+                                <p>
+                                    Donecconsectetur ac, vestibulum
+                                </p>
+                            </div>
+                        </a>
+                       <a href="#message/1" class="message">
+                            <img src="img/user-3.png">
+                            <div class="message-info">
+                                <span class="date">15:45</span>
+                                <h3>My Name Here</h3>
+                                <p>
+                                    Donecconsectetur ac, vestibulum
+									<span class="number">11</span>
+                                </p>
+                            </div>
+                        </a>
+                       <a href="#message/1" class="message">
+                            <img src="img/user-3.png">
+                            <div class="message-info">
+                                <span class="date">15:45</span>
+                                <h3>My Name Here</h3>
+                                <p>
+                                    Donecconsectetur ac, vestibulum
+                                </p>
+                            </div>
+                        </a>
+                       <a href="#message/1" class="message">
+                            <img src="img/user-3.png">
+                            <div class="message-info">
+                                <span class="date">15:45</span>
+                                <h3>My Name Here</h3>
+                                <p>
+                                    Donecconsectetur ac, vestibulum
+                                </p>
+                            </div>
+                        </a>
+						<a href="#message/1" class="message">
+                            <img src="img/user-3.png">
+                            <div class="message-info">
+                                <span class="date">1 day ago</span>
+                                <h3>My Name Here</h3>
+                                <p>
+                                    Donecconsectetur ac, vestibulum
+                                </p>
+                            </div>
+                        </a>
+                       
+                    </div>
+					<div class="about sound">
+						<div class="col-lg-12 col-sm-12 col-xs-12">
+							<i class="material-icons volume_up">
+							volume_up
+							</i> Sound off
+							<i class="material-icons settings">
+							settings
+							</i>
+						</div>
+					</div>
+                </div>
+            </div>
+
+            <div class="module">
+
+                <div class="module-title">
+					<div class="row">
+						<div class="col-lg-1 col-sm-1 col-3">
+							<img src="img/user-normal.png" alt=""/>
+						</div>
+						<div class="col-lg-9 col-sm-9 col-9">
+							<p>Hey, would you mind taking a look at this?<a href="#">http://beansuigoods.com</a>I think we're missing error state for creating projects.</p>
+							<label>Yesterday at 15:45</label>
+						</div>
+					</div>
+                </div>
+				<div class="module-title">
+					<div class="row">
+						<div class="col-lg-2 col-sm-2 col-xs-2">
+						</div>
+						<div class="col-lg-9 col-sm-9 col-9">
+								<p class="right-before">Sorry about that, just pushed a fix. Since we've yet to nail down what can and cannot do RE.
+								<br>
+								<a class="images" href="#"><img src="img/img-1.png" alt=""/><i class="material-icons">
+								zoom_in
+								</i></a>
+								<a class="images" href="#"><img src="img/img-3.png" alt=""/><i class="material-icons">
+								zoom_in
+								</i></a>
+								<a class="images" href="#"><img src="img/img-4.png" alt=""/><i class="material-icons">
+								zoom_in
+								</i></a>
+								<a class="images" href="#"><img src="img/img-5.png" alt=""/><i class="material-icons">
+								zoom_in
+								</i></a>
+								<a class="images" href="#"><img src="img/img-6.png" alt=""/><i class="material-icons">
+								zoom_in
+								</i></a>
+							</p>
+							<label>Yesterday at 15:45</label>
+						</div>
+						<div class="col-lg-1 flush-left col-sm-1 col-3">
+							<img src="img/user-normal-2.png" alt=""/>
+						</div>
+					</div>
+                </div>
+                <div class="new-message text-center">
+					<span>new messages</span>
+				</div>
+				<div class="module-title">
+					<div class="row">
+						<div class="col-lg-1 col-sm-1 col-3">
+							<img src="img/user-normal.png" alt=""/>
+						</div>
+						<div class="col-lg-9 col-sm-9 col-9">
+							<p>Cras justo odio, dapibus ac facilisis in<br><a href="#"><img src="img/img-2.png" alt=""/> Documentation.pdf</a> <span>1.2 mb</span></p>
+							<label>11:40</label>
+						</div>
+					</div>
+                </div>
+				<div class="module-title">
+					<div class="row">
+						<div class="col-lg-7 col-sm-7 col-xs-12">
+						</div>
+						<div class="col-lg-4 col-sm-4 col-9">
+							<p class="right-before">I'm with TT here.</p>
+							<label>11:42</label>
+						</div>
+						<div class="col-lg-1 flush-left col-sm-1 col-3">
+							<img src="img/user-normal-2.png" alt=""/>
+						</div>
+					</div>
+                </div>
+				<div class="module-title">
+					<div class="row">
+						<div class="col-lg-12 col-sm-12 col-xs-12">
+							<div class="add-comment">
+								<div class="col-lg-12 col-sm-12 col-xs-12">
+									<textarea placeholder="Add a comment or upload file"></textarea>
+								</div>
+								<div class="col-lg-12 col-sm-12 col-xs-12">
+									<div class="row">
+										<div class="col-lg-6 col-sm-6 col-xs-12">
+											
+											<a href="#"><i class="material-icons">
+											inbox
+											</i></a>
+											<a href="#"><i class="material-icons">
+											sentiment_very_satisfied
+											</i></a>
+											<a href="#"><i class="material-icons">
+											insert_photo
+											</i></a>
+											<a href="#"><i class="material-icons">
+											attachment
+											</i></a>
+										</div>
+										<div class="col-lg-6 text-right col-sm-6 col-xs-12">
+											<a href="#" class="btn-info">Reply</a>
+										</div>
+									</div>	
+								</div>	
+							</div>
+						</div>	
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="right-side">
+		<ul>
+			<li><a href="#">c <span>5</span></a></li>
+			<li><a href="#"><img src="img/user-normal-2.png" alt=""/> <span>1</span></a></li>
+			<li><a href="#"><img src="img/user-normal-2.png" alt=""/></a></li>
+			<li><a class="light-blue" href="#">A</a></li>
+			<li><a class="yellow" href="#">G</a></li>
+			<li><a href="#">
+				<i class="material-icons">
+				add_circle_outline
+				</i>
+			</a></li>	
+		</ul>
+		<div class="help text-center">
+			<i class="material-icons">
+			help
+			</i>
+		</div>
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.webui-popover.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    $('#example').DataTable();
+  } );
+</script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
